@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap");
+.logo-home {
+  /* The image used */
+  background-image: url("../../assets/img/logo-home.png");
+  /* height width */
+  height: 10rem;
+  width: 10rem;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.nav-container-buttons {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.nav-button {
+  background: none;
+  color: white;
+  padding: 1rem;
+}
+
+.nav-button:focus {
+  border-bottom: 0.2rem solid blue !important;
+}/*# sourceMappingURL=navbar.component.css.map */

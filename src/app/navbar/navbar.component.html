@@ -1,0 +1,21 @@
+
+
+<nav ngClass="navbar navbar-expand-lg navbar-dark bg-dark nav-container-buttons">
+    <div ngClass="container col-6">
+      <div ngClass="row col-12 justify-content-end">
+        <a ngClass="bg-dark border-0 logo-home"></a>
+      </div>
+    </div>
+    <div ngClass="container justify-content-end col-4">
+      <button ngClass="nav-button border-0">Log In</button> 
+      <div style="color:gray">//</div>
+      <button ngClass="nav-button border-0">Register</button>
+    </div>
+</nav>
+
+<nav ngClass="navbar navbar-expand-lg navbar-dark bg-dark nav-container-buttons border border-white border-start-0 border-end-0">
+  <div ngClass="container-fluid col-12 justify-content-center">
+      <button (mouseup)="plusClick('home')" ngClass="nav-button border-top-0 border-bottom-0 border-white border-1">HOME</button>
+      <button (mouseup)="plusClick('starships')" ngClass="nav-button border-top-0 border-bottom-0 border-start-0 border-white border-1">STARSHIPS</button>
+  </div>
+</nav>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body ngClass="bg-dark p-4">
+    <h1 ngClass="text-center text-white text-decoration py-4"> Startships </h1>
+    <div ngClass="card text-white text-decoration my-4" *ngFor="let x of ships">
+        <button>
+            <div ngClass="card-title text-white text-decoration p-2"><h2>{{x.name}}</h2></div>
+            <div ngClass="card-item text-white text-decoration p-2">{{x.model}}</div>
+        </button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+
+.card-item, .card-title {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.card {
+   background-color: rgb(51, 50, 50);
+}
+
+.card > button {
+    text-align: start;
+    border: none;
+    border-color: none;
+    background-color: transparent;
+}
