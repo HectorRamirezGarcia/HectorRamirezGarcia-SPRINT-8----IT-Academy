@@ -12,6 +12,7 @@ export interface Shipments {
     cargo_capacity: string,
     consumables: string,
     hyperdrive_rating: string,
+    MGLT: string,
     starship_class: string,
     pilots: [],
     films: [],

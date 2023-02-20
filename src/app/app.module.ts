@@ -7,6 +7,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { StartshipsComponent } from './startships/startships.component';
 import { FooterComponent } from './footer/footer.component';
 import { Api_requests_models } from './startships/api_requests.model';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +16,12 @@ import { Api_requests_models } from './startships/api_requests.model';
     HomeComponent,
     NavbarComponent,
     StartshipsComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    InfiniteScrollModule
   ],
   providers: [Api_requests_models],
   bootstrap: [AppComponent]

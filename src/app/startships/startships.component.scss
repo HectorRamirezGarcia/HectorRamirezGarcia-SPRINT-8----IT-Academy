@@ -14,3 +14,19 @@
     border-color: none;
     background-color: transparent;
 }
+
+.img-ship {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.img-pilots {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.text-info-ship {
+    color:rgb(140, 135, 135)
+}

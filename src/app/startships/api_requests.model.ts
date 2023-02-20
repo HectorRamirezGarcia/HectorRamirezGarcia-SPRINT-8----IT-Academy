@@ -10,7 +10,7 @@ export class Api_requests_models {
   
   constructor(public http : HttpClient){}
 
-  get_StarShipments(): Observable<any> {
-    return this.http.get<Request_Shipments>('https://starpi.herokuapp.com/starpi/starships');
+  get_StarShipments(pageNumber: number): Observable<any> {
+    return this.http.get<Request_Shipments>(`https://starpi.herokuapp.com/starpi/starships/${pageNumber}`);
   }
 }
