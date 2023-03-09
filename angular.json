@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Angular_Sprint_8": {
+    "SPRINT-8_by_Hector_Ramirez_Garcia": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-sprint-8",
+            "outputPath": "dist/sprint-8-by-hector-ramirez-garcia",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Angular_Sprint_8:build:production"
+              "browserTarget": "SPRINT-8_by_Hector_Ramirez_Garcia:build:production"
             },
             "development": {
-              "browserTarget": "Angular_Sprint_8:build:development"
+              "browserTarget": "SPRINT-8_by_Hector_Ramirez_Garcia:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Angular_Sprint_8:build"
+            "browserTarget": "SPRINT-8_by_Hector_Ramirez_Garcia:build"
           }
         },
         "test": {
@@ -100,5 +100,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

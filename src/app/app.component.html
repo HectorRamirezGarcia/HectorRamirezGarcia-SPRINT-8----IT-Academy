@@ -1,16 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Star-Wars-api</title>
-</head>
-<body>
+<!-- nav -->
+<!-- <nav class="navbar navbar-expand navbar-dark bg-dark px-3" *ngIf="user">
+  <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Users</a>
+      <button class="btn btn-link nav-item nav-link" (click)="logout()">Logout</button>
+  </div>
+</nav> -->
 
-  <app-navbar (onClick)="receiveMessage($event)"></app-navbar>
-  <app-home *ngIf="type == 'home'"></app-home>
-  <app-startships *ngIf="type == 'starships'"></app-startships>
-  <app-footer></app-footer>
-</body>
-</html>
+<nav ngClass="navbar navbar-expand-lg navbar-dark bg-dark nav-container-buttons">
+  <div ngClass="container col-8">
+    <div ngClass="row col-10 justify-content-end">
+      <button routerLink="/" ngClass="bg-dark border-0 logo-home"></button>
+    </div>
+  </div>
+  <div *ngIf="this.user == null" ngClass="container justify-content-end col-4">
+    <button routerLink="/account/login" ngClass="nav-button border-0">Log In</button>
+    <div style="color:gray">//</div>
+    <button routerLink="/account/register" ngClass="nav-button border-0">Register</button>
+  </div>
+  <div *ngIf="this.user != null" ngClass="container justify-content-end col-4">
+    <p ngClass="logged-style"> Welcome {{this.user.username}}</p>
+    <div style="color:gray">//</div>
+    <button (mouseup)="logout()" ngClass="nav-button border-0">Log Out</button>
+  </div>
+</nav>
+
+<!-- main app container -->
+<div class="app-container" [ngClass]="{ 'bg-dark': user }">
+  <alert></alert>
+  <router-outlet></router-outlet>
+</div>
+
+<footer ngClass="footer bg-dark">
+  <div ngClass="container">
+    <hr ngClass="py-1 col-12">
+    <div class="row">
+      <div class="footer-col py-4">
+        <h4>Me :I</h4>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/hector-ramirez-garcia/">About me (LinkedIn)</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

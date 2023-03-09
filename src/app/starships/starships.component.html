@@ -1,0 +1,54 @@
+<nav ngClass="navbar navbar-expand-lg navbar-dark bg-dark nav-container-buttons border border-white border-start-0 border-end-0">
+    <div ngClass="container-fluid col-12 justify-content-center">
+        <button routerLink="/" ngClass="nav-button border-top-0 border-bottom-0 border-white border-1">HOME</button>
+        <button routerLink="/starships" ngClass="nav-button border-top-0 border-bottom-0 border-start-0 border-white border-1">STARSHIPS</button>
+    </div>
+</nav>
+
+<body ngClass="bg-dark p-4" infinite-scroll [infiniteScrollDistance]="2"
+[infiniteScrollThrottle]="1000" (scrolled)="onScroll()">
+
+    <ng-template #content1 (ngSubmit)="show_Ship()" let-modal>
+        <div ngClass="container-fluid bg-dark px-5 py-2 border border-3 rounded" (ngModel)="ship">
+            <div ngClass="text-center">
+                <h1 ngClass="text-white strong">{{ship.name}}</h1>
+                <img src="{{ship.img}}" ngClass="img-ship">
+            </div>
+            <div ngClass="container-fluid text-center px-2 py-4">
+                <p ngClass="text-info-ship"><strong ngClass="text-white">Model:</strong> {{ship.model}}</p>
+                <p ngClass="text-info-ship"><strong ngClass="text-white">Starship class:</strong> {{ship.starship_class}}</p>
+                <p ngClass="text-info-ship"><strong ngClass="text-white">Manufacturer:</strong> {{ship.manufacturer}}</p>
+                <p ngClass="text-info-ship"><strong ngClass="text-white">Cost:</strong> {{ship.cost_in_credits}} credits</p>
+            </div>
+
+            <div ngClass="container-fluid text-center px-2 py-4">
+                <table>
+                    <tr>
+                        <td ngClass="col-6"><p ngClass="text-info-ship"><strong ngClass="text-white">Crew:</strong> {{ship.crew}}</p></td>
+                        <td ngClass="col-6"><p ngClass="text-info-ship"><strong ngClass="text-white">Length:</strong> {{ship.length}} meters</p></td>
+                    </tr>
+                    <tr>
+                        <td ngClass="col-6"><p ngClass="text-info-ship"><strong ngClass="text-white">Passenger capacity:</strong> {{ship.passengers}}</p></td>
+                        <td ngClass="col-6"><p ngClass="text-info-ship"><strong ngClass="text-white">Maximum atmosphering speed:</strong> {{ship.max_atmosphering_speed}} km/h</p></td>
+                    </tr>
+                    <tr>
+                        <td ngClass="col-6"><p ngClass="text-info-ship"><strong ngClass="text-white">Cargo capacity:</strong> {{ship.cargo_capacity}} tons</p></td>
+                        <td ngClass="col-6"><p ngClass="text-info-ship"><strong ngClass="text-white">Hyperdrive rating:</strong> {{ship.hyperdrive_rating}}</p></td>
+                    </tr>
+                    <tr>
+                        <td ngClass="col-6"><p ngClass="text-info-ship"><strong ngClass="text-white">Consumables:</strong> {{ship.consumables}}</p></td>
+                        <td ngClass="col-6"><p ngClass="text-info-ship"><strong ngClass="text-white">Maximum speed in realspace:</strong> {{ship.MGLT}} mglt</p></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </ng-template>
+
+    <h1 ngClass="text-center text-white text-decoration py-4"> Startships </h1>
+    <div ngClass="card text-white text-decoration my-4" *ngFor="let x of ships; let id = index">
+        <button id="{{id+1}}" (click)="openModal(content1, id)">
+            <div ngClass="card-title text-white text-decoration p-2"><h2>{{x.name}}</h2></div>
+            <div ngClass="card-item text-white text-decoration p-2">{{x.model}}</div>
+        </button>
+    </div>
+</body>

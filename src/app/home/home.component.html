@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-</head>
-<body ngClass="bg-dark p-4">
+<nav ngClass="navbar navbar-expand-lg navbar-dark bg-dark nav-container-buttons border border-white border-start-0 border-end-0">
+    <div ngClass="container-fluid col-12 justify-content-center">
+        <button routerLink="/" ngClass="nav-button border-top-0 border-bottom-0 border-white border-1">HOME</button>
+        <button *ngIf="this.user != null" routerLink="/starships" ngClass="nav-button border-top-0 border-bottom-0 border-start-0 border-white border-1">STARSHIPS</button>
+    </div>
+</nav>
+
+<body ngClass="bg-dark p-5">
     <h1 ngClass="text-center text-white text-decoration py-4"> Welcome to Star Wars API</h1>
     <p ngClass="text-center text-white py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut eros congue, imperdiet ante sed, venenatis mi. Proin viverra eros nisl, a viverra tortor euismod sed. Aenean sem nulla, tristique non elementum ac, elementum eget urna. Duis augue nisi, blandit vitae mattis a, mollis id purus. Quisque sagittis mauris in risus vestibulum, vitae elementum nunc vehicula. Sed ullamcorper dui sapien, eu volutpat urna posuere quis. Duis ornare pulvinar lectus. Duis gravida velit orci, et porta mauris rhoncus id. Suspendisse egestas nulla at augue faucibus tempus. Quisque vitae eleifend velit. Nam ac pharetra ligula.</p>
 </body>
-</html>
