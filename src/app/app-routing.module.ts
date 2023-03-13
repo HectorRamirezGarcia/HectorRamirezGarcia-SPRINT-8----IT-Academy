@@ -7,11 +7,11 @@ import { AuthGuard } from './_helpers';
 
 const accountModule = () => import('./account/account.module').then(x => x.AccountModule);
 
+
 const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'starships', component: StarshipsComponent },
-    { path: 'account', loadChildren: accountModule },
-    //{ path: 'starships', loadChildren: starshipModule},
+    { path: 'starships', component: StarshipsComponent, canActivate: [AuthGuard] },
+    { path: 'account', loadChildren: accountModule  },
 
     // otherwise redirect to home
 ];
