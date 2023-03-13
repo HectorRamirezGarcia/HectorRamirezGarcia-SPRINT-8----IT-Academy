@@ -20,12 +20,13 @@
 
 .nav-button {
     background: none;
-    color: white;
+    color: rgb(189, 186, 186);
     padding: 1rem;
+    transition: 0.7s;
 }
 
-.nav-button:focus {
-    border-bottom: 0.2rem solid blue !important;
+.nav-button:hover {
+    color: white;
 }
 
 .logged-style {
